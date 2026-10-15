@@ -120,24 +120,24 @@ button.pol{border:0;font:inherit;text-align:center}
    <p id="lkmsg" class="text-xs opacity-70 mt-4 max-w-[16rem]"></p>
   </div></div></div>
 
-<div id="ov" role="dialog" aria-modal="true" aria-label="Your surprise"><button class="cls" id="cl" aria-label="Close">✕</button>
+<div id="ov" role="dialog" aria-modal="true" aria-label="Your surprise"><button class="cls" id="cl" aria-label="Back to surprise boxes" title="Back to surprise boxes">✕</button>
  <div class="pg" id="g0"><h2 class="script shine" style="font-size:clamp(1.9rem,7.4vw,4.6rem)">Your favourite flowers</h2><p class="serif italic opacity-80 text-lg">A bouquet that never wilts</p>
   <div class="grid md:grid-cols-[1fr_auto_1fr] items-center gap-5 mt-6 w-full max-w-4xl"><div id="nL" class="grid gap-3"></div><div id="bq" class="order-first md:order-none mx-auto" style="width:min(78vw,310px);height:min(78vw,310px);position:relative"></div><div id="nR" class="grid gap-3"></div></div>
-  <button class="btn nx mt-8">Next →</button></div>
+ </div>
  <div class="pg" id="g1"><h2 class="script shine" style="font-size:clamp(1.9rem,7.4vw,4.6rem)">A playlist made for you</h2><p class="serif italic opacity-80 text-lg">Songs that remind me of you</p>
   <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-8 relative w-full max-w-3xl">
    <span class="nt" style="left:6%;top:-10px">♪</span><span class="nt" style="right:8%;top:10px;animation-delay:-1.5s">♫</span><span class="nt" style="left:12%;bottom:-14px;animation-delay:-3s">♬</span>
    <div class="glass p-4 w-64 text-left"><div class="rounded-lg flex flex-col items-center justify-center mb-3" style="aspect-ratio:1;background:linear-gradient(135deg,#ff7aa5,#f2a6b8)"><span class="script text-5xl" style="color:#4a0f26" id="pn"></span><small class="tracking-[.3em] text-[10px]" style="color:#4a0f26">BIRTHDAY MIX</small></div>
-    <div class="flex justify-between items-center"><div><p class="serif text-lg">A tiny birthday tune</p><p class="text-xs opacity-60">Made just for you · tap play</p></div><span style="color:#7be0a2">♥</span></div>
+    <div class="flex justify-between items-center"><div><p class="serif text-lg">A tiny birthday tune</p></div><span style="color:#7be0a2">♥</span></div>
     <div class="h-1 rounded mt-3" style="background:#ffffff26"><div id="pb" class="h-full rounded" style="width:0;background:var(--rose)"></div></div>
     <div class="flex justify-center mt-3"><button id="pp" class="rounded-full" style="width:46px;height:46px;background:#fff;color:#12040d;font-size:1rem">▶</button></div></div>
    <div class="vinyl" id="vn"><i id="vl"></i></div></div>
   <p class="text-xs opacity-60 mt-6">Sound only starts after you tap play ♥</p>
-  <div id="pl" class="mt-5 w-full max-w-3xl grid md:grid-cols-3 gap-3 text-left"></div>
-  <button class="btn nx mt-8">Next →</button></div>
+  <div id="pl" class="mt-5 w-full max-w-3xl grid md:grid-cols-2 gap-3 text-left"></div>
+ </div>
  <div class="pg" id="g2"><h2 class="script shine" style="font-size:clamp(1.9rem,7.4vw,4.6rem)">A letter from my heart</h2>
   <div class="paper mt-6 w-full max-w-lg text-left"><p id="letter" class="serif" style="font-size:1.12rem;line-height:28px;min-height:11rem"></p><p id="sign" class="script text-right" style="font-size:2rem;color:#c0395f;line-height:34px"></p></div>
-  <button class="btn nx mt-8">Done ✓</button></div>
+ </div>
 </div>
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Memory"><button class="cls" id="lbx" aria-label="Close memory">✕</button><div id="lbm"></div><p id="lbc" class="serif italic mt-5 text-lg md:text-xl max-w-md"></p></div>
@@ -228,12 +228,13 @@ const CFG={
     {short:'Little you? \ud83d\ude02',long:'Such kids always\u2026 make me imagine you when you were like them \ud83d\ude02'},
     {short:'Mood \ud83d\ude02',long:'Another one that made me think of you \ud83d\ude02'}],   /* edit me */
   notes:["You make every day brighter","Thank you for always being there","Your laugh is my favourite sound","I'm so proud of you","You deserve every good thing"],
-  playlist:[   /* embed: paste a YouTube or Spotify track link */
-    {title:'Song title',artist:'Artist',why:'Why this song reminds me of you',embed:''},
-    {title:'Song title',artist:'Artist',why:'Why this song reminds me of you',embed:''},
-    {title:'Song title',artist:'Artist',why:'Why this song reminds me of you',embed:''}],
+  playlist:[   /* audio: local/remote .mp3, .m4a, .wav, or .ogg; embed is an optional Spotify/YouTube fallback */
+    {title:'Mayday',artist:'Fally Ipupa',audio:'audio/mayday.mp3',embed:'https://open.spotify.com/artist/6IflU2YrY5Cyw7YoBICosV'},
+    {title:'Happy Birthday',artist:'Stevie Wonder',audio:'audio/happy-birthday.mp3',embed:'https://open.spotify.com/track/5fBlnN4KvXlH1T5CmNE5Sm'},
+    {title:'1000 Years',artist:'Christina Perri',audio:'audio/1000-years.mp3',embed:'https://open.spotify.com/track/03H03k1F6t3VqCSPRBtuHk'},
+    {title:'Dandelions',artist:'Ruth B.',audio:'audio/dandelions.mp3',embed:'https://open.spotify.com/track/2h5cjNTM2gKzWc0d6WXhSr'}],
   wish:"May every wish you make come true, Debrah.",
-  letter:"My dearest Debrah,\n\nHappy birthday to my favourite friend!\n\nThank you for the way you always pitied me whenever my bar was too low, even when I had stayed a whole week without cleaning. I miss our long calls, and the way we would say \u201cimesema dud dud\u201d. And somehow you keep appearing in my dreams when I least expect it.\n\nFor this new year of your life, I hope you receive the same kindness and joy that you give so easily. You deserve beautiful things, not just today, but all year long.",
+  letter:"My dearest Debrah,\n\nHappy birthday to my favourite friend!\n\nThank you for the way you always pitied me whenever my bar was too low, even when I had stayed a whole week without cleaning. I miss our long calls, and the way we would say \u201cimesema dud dud\u201d. And somehow you keep appearing in my dreams when I least expect it.\n\nSometimes I imagine a moment where I can just hold you close and not let go too quickly. A simple hug, but one that lasts a little longer than usual, long enough to feel the warmth of you and the comfort of being near you.\n\nThere is something special about an embrace that says everything without words. In that quiet moment, nothing else matters, just the feeling of closeness and the peace it brings. I wish I could hug you for so long that the warmth of that moment stays with me even after we part, like a sweet reminder of you throughout the day.\n\nSome moments in life are simple, but they mean everything. And a long hug from you would be one of those moments I would never forget.\n\nFor this new year of your life, I hope you receive the same kindness and joy that you give so easily. You deserve beautiful things, not just today, but all year long.",
   finale:["This little world was made for one person.","Thank you for making my real world brighter.","Happy birthday, my favourite friend."]
 };
 /* ======================= */
@@ -260,7 +261,7 @@ const maxS=()=>document.documentElement.scrollHeight-innerHeight;
 scenes.forEach((s,i)=>{const d=document.createElement('div');d.className='dot';d.onclick=()=>scrollTo({top:maxS()*i/(N-1),behavior:'smooth'});dots.appendChild(d)});
 addEventListener('scroll',()=>{vel=scrollY-last;last=scrollY;target=maxS()?scrollY/maxS()*(N-1):0},{passive:true});
 let typed=0;
-function type(){const t=CFG.letter,el=$('#letter');el.textContent='';const sg=$('#sign');sg.style.transition='opacity .8s';if(RM){el.textContent=t;sg.style.opacity=1;return}sg.style.opacity=0;let k=0;const id=++typed;(function s(){if(id!==typed)return;el.textContent=t.slice(0,++k);if(k<t.length)setTimeout(s,16);else sg.style.opacity=1})()}
+function type(){const t=CFG.letter,el=$('#letter');el.textContent='';const sg=$('#sign');sg.style.transition='opacity .8s';if(RM){el.textContent=t;sg.style.opacity=1;return}sg.style.opacity=0;let k=0;const id=++typed;(function s(){if(id!==typed)return;el.textContent=t.slice(0,++k);if(k<t.length)setTimeout(s,11);else sg.style.opacity=1})()}
 function activate(i){if(i===active)return;active=i;
   scenes.forEach((s,k)=>s.classList.toggle('on',k===i));
   bg.style.background=`radial-gradient(ellipse at 50% 45%,${scenes[i].dataset.glow}cc,#12040d 75%)`;
@@ -319,13 +320,14 @@ function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');cl
 gb.forEach((g,i)=>g.onclick=()=>{if(i===2&&opened.size<2){g.classList.remove('shake');void g.offsetWidth;g.classList.add('shake');toast('Open the other two first \u2665');return}lastBtn=g;openG(i)});
 function mark(){if(cp>=0){opened.add(cp);gb[cp].classList.add('done')}
   if(opened.size>=2&&gb[2].classList.contains('lk')){gb[2].classList.remove('lk');gb[2].classList.add('pop');toast('Your letter is unlocked \u2665')}upd()}
-function openG(i){if(cp>=0)mark();cp=i;if(i!==1)stopSong();ov.style.display='block';requestAnimationFrame(()=>ov.classList.add('show'));pgs.forEach((p,k)=>p.classList.toggle('on2',k===i));ov.scrollTop=0;
+function openG(i){if(cp>=0)mark();cp=i;if(i!==1)stopAllAudio();ov.style.display='block';requestAnimationFrame(()=>ov.classList.add('show'));pgs.forEach((p,k)=>p.classList.toggle('on2',k===i));ov.scrollTop=0;
   if(i===0)bouquet();if(i===2)type();burst(innerWidth/2,innerHeight*.3);$('#cl').focus()}
-function closeG(){if(cp<0)return;mark();stopSong();ov.classList.remove('show');setTimeout(()=>{ov.style.display='none'},600);const all=opened.size===3;cp=-1;if(lastBtn)lastBtn.focus();if(all)setTimeout(finale,900)}
-$('#cl').onclick=closeG;document.querySelectorAll('.nx').forEach(b=>b.onclick=()=>{cp<2?openG(cp+1):closeG()});
+function closeG(){if(cp<0)return;mark();stopAllAudio();ov.classList.remove('show');setTimeout(()=>{ov.style.display='none'},600);const all=opened.size===3;cp=-1;if(lastBtn)lastBtn.focus();if(all)setTimeout(finale,900)}
+$('#cl').onclick=closeG;
 addEventListener('keydown',e=>{if(e.key!=='Tab'||!ov.classList.contains('show'))return;const f=[...ov.querySelectorAll('button')].filter(b=>b.getClientRects().length);if(!f.length)return;const a=document.activeElement,i=f.indexOf(a);
   if(e.shiftKey&&(i<=0)){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&(i===f.length-1||i<0)){e.preventDefault();f[0].focus()}});
 
+$('#letter').parentNode.onclick=()=>{typed++;$('#letter').textContent=CFG.letter;$('#sign').style.opacity=1};
 /* memories lightbox */
 const lb=$('#lb');let lbOpen=false;
 function openLB(i){const m=CFG.memories[i],d=MEDIA[i],box=$('#lbm');box.textContent='';let el;
@@ -364,11 +366,19 @@ function dropNotes(){if(RM){document.querySelectorAll('.bub').forEach(e=>e.style
 
 /* playlist + synthesised birthday song */
 let ac,state=0,t0=0,total=0;const pp=$('#pp'),vn=$('#vn'),pb=$('#pb');
-function embedUrl(u){u=String(u||'');let m;if((m=u.match(/(?:youtu\.be\/|v=)([\w-]{11})/)))return 'https://www.youtube.com/embed/'+m[1];if((m=u.match(/open\.spotify\.com\/(track|album|playlist)\/(\w+)/)))return `https://open.spotify.com/embed/${m[1]}/${m[2]}`;return ''}
+function embedUrl(u){u=String(u||'');let m;if((m=u.match(/(?:youtu\.be\/|v=)([\w-]{11})/)))return 'https://www.youtube.com/embed/'+m[1];if((m=u.match(/open\.spotify\.com\/(?:embed\/)?(track|album|playlist|artist)\/(\w+)/)))return `https://open.spotify.com/embed/${m[1]}/${m[2]}`;return ''}
+let activeAudio=null;
 CFG.playlist.forEach((s,i)=>{const c=document.createElement('div');c.className='glass p-4';const e=embedUrl(s.embed);
-  c.innerHTML=`<p class="kicker">Track ${i+1}</p><p class="serif text-lg mt-1">${esc(s.title)}</p><p class="text-xs opacity-60">${esc(s.artist)}</p><p class="text-xs opacity-80 mt-2 italic">${esc(s.why)}</p>`;
-  if(e){const f=document.createElement('iframe');f.src=e;f.loading='lazy';f.allow='autoplay; encrypted-media';f.title=s.title;f.style.cssText='width:100%;height:'+(e.includes('spotify')?'80px':'160px')+';border:0;border-radius:12px;margin-top:.7rem';c.appendChild(f)}
-  else c.insertAdjacentHTML('beforeend','<div class="mt-3 text-[11px] opacity-50 tracking-widest uppercase">\u266a your song goes here</div>');
+  c.innerHTML=`<p class="kicker">Track ${i+1}</p><p class="serif text-lg mt-1">${esc(s.title)}</p><p class="text-xs opacity-60">${esc(s.artist)}</p>`;
+  if(s.audio){
+    const a=document.createElement('audio');a.controls=true;a.preload='metadata';a.src=s.audio;a.setAttribute('aria-label',`${s.title} by ${s.artist}`);a.style.cssText='width:100%;margin-top:.7rem';
+    a.addEventListener('play',()=>{if(activeAudio&&activeAudio!==a)activeAudio.pause();stopSong();activeAudio=a});
+    a.addEventListener('ended',()=>{if(activeAudio===a)activeAudio=null});
+    a.addEventListener('error',()=>{if(!e)return;const f=document.createElement('iframe');f.src=e;f.loading='lazy';f.allow='autoplay; encrypted-media';f.title=s.title;f.style.cssText='width:100%;height:'+(e.includes('spotify')?'152px':'180px')+';border:0;border-radius:12px;margin-top:.7rem';a.replaceWith(f)});
+    c.appendChild(a);
+  } else if(e){
+    const f=document.createElement('iframe');f.src=e;f.loading='lazy';f.allow='autoplay; encrypted-media';f.title=s.title;f.style.cssText='width:100%;height:'+(e.includes('spotify')?'152px':'180px')+';border:0;border-radius:12px;margin-top:.7rem';c.appendChild(f);
+  } else c.insertAdjacentHTML('beforeend','<div class="mt-3 text-[11px] opacity-50 tracking-widest uppercase">♪ add an audio file in CFG.playlist</div>');
   $('#pl').appendChild(c)});
 function startSong(){ac=ac||new(window.AudioContext||window.webkitAudioContext)();
   const n=[[392,.75],[392,.25],[440,1],[392,1],[523,1],[494,2],[392,.75],[392,.25],[440,1],[392,1],[587,1],[523,2],[392,.75],[392,.25],[784,1],[659,1],[523,1],[494,1],[440,1],[698,.75],[698,.25],[659,1],[523,1],[587,1],[523,2]];
@@ -376,6 +386,7 @@ function startSong(){ac=ac||new(window.AudioContext||window.webkitAudioContext)(
     g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.22,t+.03);g.gain.exponentialRampToValueAtTime(.001,t+d*.95);o.connect(g).connect(ac.destination);o.start(t);o.stop(t+d);t+=d});
   total=t-t0;state=1;vn.classList.add('spin');pp.textContent='❚❚';burst(innerWidth/2,innerHeight*.45)}
 function stopSong(){if(ac){try{ac.close()}catch(e){}ac=null}state=0;vn.classList.remove('spin');pp.textContent='▶';pb.style.width='0'}
+function stopAllAudio(){if(activeAudio){activeAudio.pause();activeAudio.currentTime=0;activeAudio=null}stopSong()}
 pp.onclick=()=>{if(state===0)startSong();else if(state===1){ac.suspend();state=2;vn.classList.remove('spin');pp.textContent='▶'}else{ac.resume();state=1;vn.classList.add('spin');pp.textContent='❚❚'}};
 function music(){if(state===1){const p=(ac.currentTime-t0)/total;pb.style.width=Math.min(100,p*100)+'%';if(p>=1)stopSong()}}
 if(matchMedia('(pointer:fine)').matches)addEventListener('pointermove',e=>{const c=$('#cur');c.style.left=e.clientX+'px';c.style.top=e.clientY+'px'});
