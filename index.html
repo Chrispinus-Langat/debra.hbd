@@ -196,24 +196,6 @@ button.pol{border:0;font:inherit;text-align:center}
     <div id="albumWrap" class="w-full max-w-3xl mt-9">
       <p class="kicker mb-3">More of us</p>
       <div id="album" class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-3">
-        <button id="albumVideo" type="button" class="athumb albumVideo" aria-label="Play Debrah's birthday photo video">
-          <video muted loop playsinline preload="metadata"></video><span class="pl" aria-hidden="true">▶</span>
-        </button>
-        <div class="athumb cpTile" aria-label="A little reel of Debrah’s photos">
-          <img class="cpL" alt="" style="animation-delay:0s">
-          <img class="cpL" alt="" style="animation-delay:2s">
-          <img class="cpL" alt="" style="animation-delay:4s">
-          <img class="cpL" alt="" style="animation-delay:6s">
-          <img class="cpL" alt="" style="animation-delay:8s">
-          <img class="cpL" alt="" style="animation-delay:10s">
-          <div class="cpM" style="animation-delay:0s"></div>
-          <div class="cpM" style="animation-delay:2s"></div>
-          <div class="cpM" style="animation-delay:4s"></div>
-          <div class="cpM" style="animation-delay:6s"></div>
-          <div class="cpM" style="animation-delay:8s"></div>
-          <div class="cpM" style="animation-delay:10s"></div>
-          <div class="cpF"></div>
-        </div>
       </div>
     </div>
   </section>
@@ -389,7 +371,6 @@ function openPhotoLB(url){const box=$('#lbm');box.textContent='';const im=new Im
   lb.style.display='flex';requestAnimationFrame(()=>lb.classList.add('show'));lbOpen=true;$('#lbx').focus()}
 function openVideoLB(url){const box=$('#lbm');box.textContent='';const v=document.createElement('video');v.src=url;v.controls=true;v.autoplay=true;v.setAttribute('playsinline','');v.style.maxWidth='88vw';v.style.maxHeight='70vh';box.appendChild(v);$('#lbc').textContent='';lb.style.display='flex';requestAnimationFrame(()=>lb.classList.add('show'));lbOpen=true;$('#lbx').focus();v.play().catch(()=>{})}
 const memoryVideo=document.createElement('button');memoryVideo.className='pol';memoryVideo.style.cssText='--r:2deg';memoryVideo.setAttribute('aria-label','Open Debrah’s cinematic photo video');memoryVideo.innerHTML='<div class="ph videoPh"><video muted autoplay loop playsinline></video><span class="pl" aria-hidden="true">▶</span></div><p>Our memories ♥</p>';memoryVideo.querySelector('video').src=ALBUM_VIDEO;memoryVideo.onclick=()=>openVideoLB(ALBUM_VIDEO);$('#pols').appendChild(memoryVideo);
-const albumVideo=$('#albumVideo');albumVideo.querySelector('video').src=ALBUM_VIDEO;albumVideo.onclick=()=>openVideoLB(ALBUM_VIDEO);
 
 /* little looping reel: 3 of her photos, freeze → mosaic flash → next */
 (function initReel(){
